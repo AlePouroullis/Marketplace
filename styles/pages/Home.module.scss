@@ -1,0 +1,40 @@
+@use "../settings";
+
+.background {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  display: flex;
+  // make all direct children even width and h
+  > * {
+    flex: 1 1 0px;
+    height: 100%;
+
+// box shadow on right
+      &:not(:last-child) {
+         box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+      }
+  }
+}
+.one {
+  background-color: settings.$turqoiseGreen;
+}
+
+.two {
+  background-color: settings.$paleSpringBud;
+}
+
+.three {
+  background-color: settings.$bisque;
+}
+
+.four {
+  background-color: settings.$mauvelous;
+}
+
+.five {
+  background-color: settings.$deepTaupe;
+}

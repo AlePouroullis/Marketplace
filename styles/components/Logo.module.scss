@@ -1,0 +1,13 @@
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  .logoText {
+    text-transform: uppercase;
+    letter-spacing: 0.05ch;
+    font-size: 25px;
+  }
+  .logoIcon {
+   margin-left: -3px;
+   font-size: 29px;
+  }
+}

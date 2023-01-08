@@ -1,0 +1,35 @@
+@use "../../../settings";
+
+.header {
+  height: settings.$headerHeight;
+  background-color: white;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  position: sticky;
+  top: 0;
+}
+
+.nav {
+  .navList {
+    display: flex;
+    gap: 10px;
+    .navItem {
+      padding: 15px 30px;
+      border-radius: 10px;
+      &.active {
+        box-shadow: 0 2px 10px 0px rgba(0, 0, 0, 0.1);
+      }
+      .navLink {
+        transition: color 0.3s ease;
+        &:hover {
+          color: red;
+        }
+      }
+    }
+  }
+}
+
+
