@@ -4,10 +4,10 @@ import styles from "@styles/components/Layout/Header/Header.module.scss";
 import { useMediaQuery } from "@mui/material";
 import { useState, useEffect } from "react";
 import Burger from "./Burger";
+import { links } from "@data/links";
 
 export default function Header() {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
-  // check screen size is at most 1100px
   const isMobile = useMediaQuery("(max-width: 1100px)");
 
   useEffect(() => {
@@ -24,16 +24,20 @@ export default function Header() {
       ) : (
         <nav className={styles.nav}>
           <ul className={styles.navList}>
-            <li className={styles.navItem}>
-              <Link className={styles.navLink} href="/listings">
-                Listings
-              </Link>
-            </li>
-            <li className={`${styles.navItem} ${styles.active}`}>
-              <Link className={`${styles.navLink}`} href="/signin">
-                Sign in
-              </Link>
-            </li>
+            {links.slice().reverse().map((link) => {
+              return (
+                <li
+                  className={`${styles.navItem} ${
+                    link.special ? styles.special : ""
+                  }`}
+                  key={link.href}
+                >
+                  <Link className={styles.navLink} href={link.href}>
+                    {link.name}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </nav>
       )}

@@ -1,14 +1,14 @@
 .burgerMenu {
-   display: flex;
-   flex-direction: column;
-   gap: 6px;
-   padding: 15px;
-   cursor: pointer;
- 
-   .bar {
-     width: 30px;
-     height: 3px;
-     border-radius: 5px;
-     background-color: black;
-   }
- }
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 15px;
+  cursor: pointer;
+
+  .bar {
+    width: 30px;
+    height: 3px;
+    border-radius: 5px;
+    background-color: black;
+  }
+}

@@ -6,7 +6,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-export default function Layout({ children }: Props) {
+export default function GeneralLayout({ children }: Props) {
   return (
     <div className={styles.layoutWrapper}>
       <Header />

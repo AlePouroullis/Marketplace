@@ -13,11 +13,6 @@ body {
   overflow-x: hidden;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 h1,
 h2,
 h3,
@@ -38,4 +33,18 @@ button {
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+a {
+  // make links blue and on hover underline
+  color: #0070f3;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+input[type="password"]:not(:placeholder-shown) {
+  font-family: Verdana;
+  letter-spacing: 0.1em;
 }

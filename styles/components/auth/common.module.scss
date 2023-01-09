@@ -1,0 +1,68 @@
+@use "../../settings";
+
+.inputsWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  margin-bottom: 15px;
+
+  label {
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  input,
+  select {
+    border-radius: 6px;
+    border: 1px solid rgb(178, 178, 178);
+    padding: 6px;
+    margin-bottom: 5px;
+  }
+
+  &.error {
+    input,
+    input:focus,
+    select,
+    select:focus {
+      outline: settings.$errorColour !important;
+      border: 1px solid settings.$errorColour;
+    }
+  }
+
+  &.noMarginBottom {
+    margin-bottom: 0;
+  }
+}
+
+.inputMatchGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonWrapper {
+  &.buttonLinkWrapper {
+    color: inherit;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  display: flex;
+
+  button {
+    font-weight: 500;
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+.error {
+  color: settings.$errorColour;
+  font-size: 12px;
+}
+
+.select {
+}

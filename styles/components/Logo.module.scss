@@ -1,13 +1,23 @@
+.link {
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 .logoWrapper {
   display: flex;
   align-items: center;
+  user-select: none;
+  cursor: pointer;
   .logoText {
     text-transform: uppercase;
     letter-spacing: 0.05ch;
-    font-size: 25px;
+    font-size: 28px;
   }
   .logoIcon {
-   margin-left: -3px;
-   font-size: 29px;
+    margin-left: 5px;
+   font-size: 28px;
   }
 }
