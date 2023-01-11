@@ -19,7 +19,7 @@
   select {
     border-radius: 6px;
     border: 1px solid rgb(178, 178, 178);
-    padding: 6px;
+    padding: 8px;
     margin-bottom: 5px;
   }
 
@@ -43,6 +43,39 @@
   flex-direction: column;
 }
 
+.divider {
+  text-align: center;
+  position: relative;
+  top: 2px;
+  padding-top: 1px;
+  margin: 20px 0;
+  line-height: 0;
+
+  h5 {
+    line-height: 1;
+    font-size: 12px;
+    color: #767676;
+    font-weight: 400;
+    z-index: 2;
+    position: relative;
+    display: inline-block;
+    background-color: #fff;
+    padding: 0 8px 0 7px;
+  }
+  &::after {
+    content: "";
+    width: 100%;
+    background-color: transparent;
+    display: block;
+    height: 1px;
+    border-top: 1px solid #e7e7e7;
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    z-index: 1;
+  }
+}
+
 .buttonWrapper {
   &.buttonLinkWrapper {
     color: inherit;
@@ -62,7 +95,4 @@
 .error {
   color: settings.$errorColour;
   font-size: 12px;
-}
-
-.select {
 }

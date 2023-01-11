@@ -1,27 +1,10 @@
 import commonStyles from "@styles/components/auth/common.module.scss";
-import { useState } from "react";
+import { useState, Fragment } from "react";
 import AuthLayout from "@compontents/auth/AuthLayout";
 import HelperText from "@compontents/HelperText";
 import { Validator } from "@utils/validator";
-
-// create list of south african universities, with value and label
-const universities = [
-  { value: "university-of-johannesburg", label: "University of Johannesburg" },
-  {
-    value: "university-of-the-witwatersrand",
-    label: "University of the Witwatersrand",
-  },
-  { value: "university-of-cape-town", label: "University of Cape Town" },
-  { value: "university-of-stellenbosch", label: "University of Stellenbosch" },
-  { value: "university-of-natal", label: "University of Natal" },
-  {
-    value: "university-of-the-free-state",
-    label: "University of the Free State",
-  },
-  { value: "university-of-north-west", label: "University of North West" },
-  { value: "university-of-pretoria", label: "University of Pretoria" },
-  { value: "university-of-south-africa", label: "University of South Africa" },
-];
+import Link from "next/link";
+import { universities } from "@data/universities";
 
 export default function Register() {
   // inputs
@@ -41,7 +24,7 @@ export default function Register() {
     university: { error: false, message: "" },
   });
 
-  const createAccount = () => { 
+  const createAccount = () => {
     setShowInfoText(false);
     let newErrorState = errorState;
 
@@ -314,6 +297,21 @@ export default function Register() {
               Create account
             </button>
           </div>
+          <Fragment>
+            <div className={commonStyles.divider}>
+              <h5>Already have an account?</h5>
+            </div>
+            <div className={commonStyles.alternativeActionWrapper}>
+              <Link
+                href="/signin"
+                className={`${commonStyles.buttonLinkWrapper} ${commonStyles.buttonWrapper}`}
+              >
+                <button className={commonStyles.button}>
+                  Sign in
+                </button>
+              </Link>
+            </div>
+          </Fragment>
         </div>
       </form>
     </AuthLayout>

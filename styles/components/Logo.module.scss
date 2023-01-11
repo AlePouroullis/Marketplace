@@ -1,6 +1,8 @@
+@use "../settings";
+
 .link {
   text-decoration: none;
-  color: inherit;
+  color: settings.$primaryTwo;
   &:hover {
     text-decoration: none;
   }

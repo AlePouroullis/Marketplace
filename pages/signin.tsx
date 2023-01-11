@@ -36,10 +36,10 @@ export default function SignIn({ email, formType }: Props) {
       </form>
       {formType === FormType.EMAIL && (
         <Fragment>
-          <div className={styles.divider}>
+          <div className={commonStyles.divider}>
             <h5>New to CampusConnect?</h5>
           </div>
-          <div className={styles.createAccountWrapper}>
+          <div className={commonStyles.alternativeActionWrapper}>
             <Link
               href="/register"
               className={`${commonStyles.buttonLinkWrapper} ${commonStyles.buttonWrapper}`}

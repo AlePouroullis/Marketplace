@@ -6,7 +6,7 @@
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: white;
+  background-color: settings.$primaryFive;
   color: black;
   z-index: 100;
   display: flex;
@@ -20,15 +20,22 @@
 }
 
 .header {
-  padding: 20px 30px;
+  height: settings.$headerHeight;
+  padding: 0 30px;
+
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   .closeMenuButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: transparent;
+    padding: 15px;
 
     .closeIcon {
-      font-size: 45px;
+      font-size: 40px;
       // color: #444444;
     }
   }

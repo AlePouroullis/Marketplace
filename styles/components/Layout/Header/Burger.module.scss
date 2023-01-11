@@ -1,9 +1,11 @@
+@use "../../../settings";
 .burgerMenu {
   display: flex;
   flex-direction: column;
   gap: 6px;
   padding: 15px;
   cursor: pointer;
+  box-sizing: content-box;
 
   .bar {
     width: 30px;

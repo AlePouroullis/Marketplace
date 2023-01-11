@@ -51,11 +51,11 @@ export default function PasswordForm({ email }: Props) {
           )}
         </div>
       </div>
-      <div className={commonStyles.buttonWrapper}>
+      <div className={`${commonStyles.buttonWrapper} ${styles.spaceBottom}`}>
         <button onClick={handleSubmit}>Sign in</button>
       </div>
 
-      <div>
+      <div className={styles.rememberMeContainer}>
         <label htmlFor="auth-remember-me">
           <div className={styles.checkbox}>
             <label>
@@ -64,7 +64,7 @@ export default function PasswordForm({ email }: Props) {
                 type="checkbox"
                 checked={rememberMe}
               />
-              <span>Remember me</span>
+              <span className={styles.text}>Remember me</span>
             </label>
           </div>
         </label>
